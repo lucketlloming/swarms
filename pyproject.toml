@@ -87,7 +87,8 @@ ignore_missing_imports = true
 testpaths = ["tests"]
 asyncio_mode = "auto"
 # removed --cov flags so a plain `pytest` run doesn't require pytest-cov to be installed
-addopts = "-q"
+# -v for verbose output — easier to see which tests pass/fail during local dev
+addopts = "-v -q"
 
 [tool.coverage.run]
 source = ["src/swarms"]
