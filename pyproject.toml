@@ -89,7 +89,8 @@ asyncio_mode = "auto"
 # removed --cov flags so a plain `pytest` run doesn't require pytest-cov to be installed
 # -v for verbose output — easier to see which tests pass/fail during local dev
 # removed -q so verbose output isn't suppressed by quiet mode at the same time
-addopts = "-v"
+# --tb=short: show shorter tracebacks — long tracebacks are noisy during exploratory work
+addopts = "-v --tb=short"
 
 [tool.coverage.run]
 source = ["src/swarms"]
