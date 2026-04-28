@@ -90,7 +90,8 @@ asyncio_mode = "auto"
 # -v for verbose output — easier to see which tests pass/fail during local dev
 # removed -q so verbose output isn't suppressed by quiet mode at the same time
 # --tb=short: show shorter tracebacks — long tracebacks are noisy during exploratory work
-addopts = "-v --tb=short"
+# --no-header: skip the pytest version/platform header line to reduce noise
+addopts = "-v --tb=short --no-header"
 
 [tool.coverage.run]
 source = ["src/swarms"]
